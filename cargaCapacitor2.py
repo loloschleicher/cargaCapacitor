@@ -25,13 +25,15 @@ plt.show()
 
 
 def valorIncognitas():
+    print("Tiempo           ValorReal           ValorTeorico                Error")
 
     for i in range(len(valoresX)):
         yModelo = 0.8080754572468457*valoresX[i] + 3.3621494232662332
-        print("valor: " + str(yModelo))
         error = valoresY[i] - yModelo
-        print("error: " + str(error) + "\n")
+        print (str(valoresX[i]) + "         " + str(valoresY[i]) + "        " + str(yModelo) + "        " + str(error))
 
+
+#ejercicio 3
 def grafica():
     arrayYmodelo = []
     for i in range(len(valoresX)):

@@ -1,8 +1,8 @@
 
 
 def interpolacionLineal():
-    R = 12000
-    C = 0.00022
+    R = 120000
+    C = 0.10022
     x = R * C
     xCero = 2.6262626e+00
     xUno = 2.7272727e+00
