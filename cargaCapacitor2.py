@@ -19,6 +19,7 @@ for x, y in valores.items():
     valoresY.append(float(y))
 
 # plot valores experimentales
+print()
 plt.plot(valoresX, valoresY, ".")
 plt.axis([0, max(valoresX), 0, max(valoresY)])
 plt.show()
