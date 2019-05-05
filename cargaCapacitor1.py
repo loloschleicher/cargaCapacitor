@@ -59,14 +59,17 @@ def graficaPreliminar():
 
 
 def valorIncognitas():
-    print("\n\nValores de las incognitas y errores \nTiempo           ValorReal           ValorTeorico                Error")
-
+    print("\n\nValores de las incognitas y errores \nTiempo           ValorReal           ValorTeorico ")
+    Sr = 0
     for i in range(len(valoresX)):
         yModelo = 0.8080754572468457*valoresX[i] + 3.3621494232662332
-        error = valoresY[i] - yModelo
-        print (str(valoresX[i]) + "         " + str(valoresY[i]) + "        " + str(yModelo) + "        " + str(error))
+        Sr += math.pow(yModelo - 3.3621494232662332 - (0.8080754572468457*valoresX[i]), 2)
+        print (str(valoresX[i]) + "         " + str(valoresY[i]) + "        " + str(yModelo))
+    error = math.sqrt(Sr/(len(valoresY) - 2))
+    print("\nEL error es de " + str(error))
 
 
+    
 #ejercicio 3
 def graficaSuperpuesta():
     print("\n\nEjercicio 3: \nGrafica De Los Datos Experimentales y de los valores Obtenidos por la ecuacion linealizada")
